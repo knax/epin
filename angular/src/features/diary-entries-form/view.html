@@ -1,0 +1,27 @@
+<md-toolbar>
+  <div class="md-toolbar-tools">
+    <md-button class="md-icon-button" aria-label="Menu" ng-if="!main.$mdMedia('gt-md')" ng-click="diaryEntriesForm.goToDiary()">
+      <md-icon md-svg-icon="arrow-left"></md-icon>
+    </md-button>
+    <h2>
+      <span ng-bind="diaryEntriesForm.toolbarTitle"></span>
+    </h2>
+  </div>
+</md-toolbar>
+
+<md-content layout-padding>
+  <form action="" layout="column">
+    <md-input-container flex>
+      <label>Title</label>
+      <input ng-model="diaryEntriesForm.entry.title">
+    </md-input-container>
+    <md-input-container class="md-block">
+      <label style="margin-bottom: 5px">Content</label>
+      <textarea ng-model="diaryEntriesForm.entry.content" columns="1" rows="5"></textarea>
+    </md-input-container>
+  </form>
+</md-content>
+
+<md-button class="md-fab md-fab-bottom-right" aria-label="Save Entry" ng-click="diaryEntriesForm.save()">
+  <md-icon md-svg-icon="content-save"></md-icon>
+</md-button>

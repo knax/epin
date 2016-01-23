@@ -1,0 +1,18 @@
+<section layout="row" flex ng-cloak>
+  <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left"
+              md-is-locked-open="main.$mdMedia('gt-md')">
+    <md-toolbar class="md-theme-indigo">
+      <h1 class="md-toolbar-tools">Diary App</h1>
+    </md-toolbar>
+    <md-content>
+      <md-list>
+        <md-list-item ng-click="main.navigateTo(menu.state)" ng-repeat="menu in main.menus">
+          <md-icon md-svg-icon="{{menu.icon}}"></md-icon>
+          <p ng-bind="menu.name"></p>
+        </md-list-item>
+      </md-list>
+    </md-content>
+  </md-sidenav>
+
+  <ui-view style="height: 100vh" flex></ui-view>
+</section>

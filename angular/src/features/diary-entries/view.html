@@ -1,0 +1,32 @@
+<md-toolbar>
+  <div class="md-toolbar-tools">
+    <md-button class="md-icon-button" aria-label="Menu" ng-if="!main.$mdMedia('gt-md')" ng-click="main.openMenu()">
+      <md-icon md-svg-icon="menu"></md-icon>
+    </md-button>
+    <h2>
+      <span>Diary</span>
+    </h2>
+  </div>
+</md-toolbar>
+<md-content>
+  <md-list>
+    <div ng-repeat="entry in diaryEntries.entries">
+      <md-list-item class="md-2-line" ng-click="diaryEntries.edit(entry)">
+        <div class="md-list-item-text">
+          <h3>{{ entry.title }}</h3>
+          <p style="text-overflow: ellipsis; width: 80%; white-space: nowrap; overflow: hidden;">{{ entry.content }}</p>
+        </div>
+        <md-button class="md-icon-button md-secondary" aria-label="Delete diary"
+                   ng-click="diaryEntries.delete($event, entry)">
+          <md-icon md-svg-icon="delete"></md-icon>
+        </md-button>
+
+      </md-list-item>
+      <md-divider></md-divider>
+    </div>
+
+  </md-list>
+</md-content>
+<md-button class="md-fab md-fab-bottom-right" aria-label="Add Entry" ng-click="diaryEntries.create()">
+  <md-icon md-svg-icon="plus"></md-icon>
+</md-button>
