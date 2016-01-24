@@ -11,14 +11,18 @@
 
 <md-content layout-padding>
   <form action="" layout="column">
-    <md-input-container flex>
-      <label>Title</label>
-      <input ng-model="diaryEntriesForm.entry.title">
-    </md-input-container>
-    <md-input-container class="md-block">
-      <label style="margin-bottom: 5px">Content</label>
-      <textarea ng-model="diaryEntriesForm.entry.content" columns="1" rows="5"></textarea>
-    </md-input-container>
+    <div layout="row">
+      <md-input-container flex>
+        <label>Title</label>
+        <input ng-model="diaryEntriesForm.entry.title">
+      </md-input-container>
+    </div>
+    <div layout="row" flex>
+      <md-input-container class="md-block" flex>
+        <label style="margin-bottom: 5px">Content</label>
+        <textarea ng-model="diaryEntriesForm.entry.content" columns="1" rows="10"></textarea>
+      </md-input-container>
+    </div>
   </form>
 </md-content>
 
