@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <title>Diary</title>
   <base href="/">
-<link href="/app.8847b83171b936e092c4.css" rel="stylesheet"></head>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+<link href="/app.df2ce709ff855abff87f.css" rel="stylesheet"></head>
 <body>
 <ui-view></ui-view>
-<script src="/app.8847b83171b936e092c4.js"></script></body>
+<script src="/app.df2ce709ff855abff87f.js"></script></body>
 </html>
